@@ -19,6 +19,13 @@
 			</snapshots>
 		</repository>
 	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>excilys</id>
+			<name>Excilys Repository</name>
+			<url>http://repository.excilys.com/content/groups/public</url>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<properties>
 		<maven.compiler.source>${maven.compiler.source}</maven.compiler.source>
@@ -86,6 +93,11 @@
 					<artifactId>scala-maven-plugin</artifactId>
 					<version>\${scala-maven-plugin.version}</version>
 				</plugin>
+				<plugin>
+					<groupId>com.excilys.ebi.gatling</groupId>
+					<artifactId>gatling-maven-plugin</artifactId>
+					<version>\${gatling.version}</version>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 		<plugins>
@@ -110,6 +122,15 @@
 						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.excilys.ebi.gatling</groupId>
+				<artifactId>gatling-maven-plugin</artifactId>
+				<configuration>
+					<includes>
+						<include>**/*Simulation.scala</include>
+					</includes>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
