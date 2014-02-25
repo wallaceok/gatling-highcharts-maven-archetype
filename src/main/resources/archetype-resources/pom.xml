@@ -8,22 +8,19 @@
 
 	<repositories>
 		<repository>
-			<id>excilys</id>
-			<name>Excilys Repository</name>
-			<url>http://repository.excilys.com/content/groups/public</url>
+			<id>sonatype</id>
+			<name>Sonatype OSS</name>
+			<url>https://oss.sonatype.org/content/groups/public</url>
 			<releases>
 				<updatePolicy>never</updatePolicy>
 			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
 		</repository>
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
-			<id>excilys</id>
-			<name>Excilys Repository</name>
-			<url>http://repository.excilys.com/content/groups/public</url>
+			<id>sonatype</id>
+			<name>Sonatype OSS</name>
+			<url>https://oss.sonatype.org/content/groups/public</url>
 		</pluginRepository>
 	</pluginRepositories>
 
